@@ -1,21 +1,21 @@
-MIT License
 
-Copyright (c) 2025 LucifeR
+---
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+### How It Works
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. **Welcome Screen:**  
+   The user enters their name before proceeding.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. **Configuration:**  
+   The user selects the test type (words or paragraphs), duration (1, 3, 5, 10, 15 minutes or unlimited), and difficulty level. Upon starting the test, a random text is generated accordingly.
+
+3. **Typing Test:**  
+   The text is displayed word-by-word. As the user types, each character is validated in real time. Correct characters are highlighted in green, while incorrect ones turn red. The app only allows backspacing within the current word—once the space is pressed to finalize the word, corrections for that word are disabled.
+
+4. **Results:**  
+   When time runs out (or when the test is ended), the application calculates and displays the user’s WPM, accuracy, and other details. The results are temporarily saved in local storage.
+
+5. **About Page:**  
+   Provides an overview of the app’s features, the technologies used, and details about the developer.
+
+This complete solution should meet your requirements for a beautiful, modern, and fully functional typing practice/test app. Enjoy coding and happy typing!

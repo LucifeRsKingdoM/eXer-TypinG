@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eXer TypinG - Typing Test</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>eXer TypinG</h1>
+    <nav>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Left Column: User Info -->
+    <div id="user-info">
+      <p><strong>Name:</strong> <span id="display-name"></span></p><br>
+      <p><strong>Type:</strong> <span id="display-type"></span></p><br>
+      <p><strong>Difficulty:</strong> <span id="display-difficulty"></span></p><br>
+      <p><strong>Duration:</strong> <span id="display-duration"></span></p>
+    </div>
+    
+    <!-- Center Column: Typing Test Section -->
+    <div class="center-column">
+    <section id="typing-section" class="active">
+      <div class="center-greeting">
+        <h2 id="welcome-user"></h2>
+      </div>
+      <div id="typing-display"></div>
+      <input type="text" id="hidden-input" autofocus autocomplete="off">
+    </section>
+
+    <section id="results-section">
+      <div class="results-wrapper">
+        <!-- Big Emoji at the Top -->
+        <div class="results-emoji">🎉</div>
+        
+        <!-- Title with Name -->
+        <h2 class="results-title">
+          Congratulations, <span id="result-username"></span>!
+        </h2>
+        
+        <!-- Results Details -->
+        <div class="results-details">
+          <p><strong>1.</strong> <span id="result-duration"></span></p>
+          <p><strong>2.</strong> <span id="result-difficulty"></span></p>
+          <p><strong>3.</strong> <span id="result-wpm"></span></p>
+          <p><strong>4.</strong> <span id="result-accuracy"></span></p>
+        </div>
+        
+        <!-- Accuracy Progress Bar -->
+        <div class="progress-container">
+          <label>Graph</label>
+          <div class="progress-bar">
+            <div class="progress" id="accuracy-progress"></div>
+          </div>
+        </div>
+        
+        <!-- Restart Button -->
+        <button id="restart-btn">Restart</button>
+      </div>
+    </section>
+    </div>
+
+    <!-- Right Column: Timer -->
+    <div id="info-container2">
+      <span id="timer">Time: 0</span>
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 eXer TypinG || All Rights Reserved</p>
+  </footer>
+  
+  <script src="main.js"></script>
+  <script>
+     // Suppose "accuracyVal" is the accuracy number (e.g., 73)
+      const accuracyVal = accuracy; // or however you store it
+
+    // Update the text in #result-accuracy
+    document.getElementById('result-accuracy').textContent = accuracyVal;
+
+    // Animate the bar
+    const accuracyBar = document.getElementById('accuracy-progress');
+    accuracyBar.style.width = accuracyVal + "%";
+  </script>
+</body>
+</html>

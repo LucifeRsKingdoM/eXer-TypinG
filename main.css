@@ -1,0 +1,198 @@
+/* RESET & GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  color: #333;
+  /* Ensure the page stretches to full height */
+  min-height: 100vh;
+  /* Column flex for header -> main -> footer stacking */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  /* This allows main to stretch vertically between header & footer */
+  flex: 1;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start; /* Align columns at the top */
+}
+
+/* Left column (User Info) */
+#user-info {
+  font-size: 1.8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Center column (Typing Section + results) */
+#typing-section, #results-section {
+  display: none; /* We'll show/hide with .active or in JS. */
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#typing-section.active,
+#results-section.active {
+  display: block;
+}
+
+.center-greeting {
+  text-align: center;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+/* Typing display box */
+#typing-display {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  min-height: 150px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  cursor: text;
+  margin-bottom: 20px;
+}
+#typing-display .word {
+  margin-right: 5px;
+}
+#typing-display .current-word {
+  background: rgba(251, 255, 0, 0.973);
+  border-radius: 3px;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
+#hidden-input {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+/* Right column (Timer) */
+#info-container2 {
+  /* If you want the timer at the top right: no negative offsets needed. */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#info-container2 #timer {
+  font-size: 30px;
+  text-align: center;
+  color: initial;
+}
+
+
+/* RESULTS SECTION - Centered, with a box, bigger text, and progress bar */
+#results-section {
+  display: none;            /* Hidden by default, show with .active */
+  text-align: center;       /* Center text */
+  padding: 40px;            /* Space around content */
+}
+
+#results-section.active {
+  display: block;           /* Reveal when test ends */
+}
+
+.results-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;           /* Center horizontally */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.results-emoji {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.results-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.results-details p {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+/* Progress Bar Container */
+.progress-container {
+  margin: 30px 0;
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 10px;
+  height: 20px;
+  width: 80%;            /* Bar width, can adjust */
+  margin: 0 auto;        /* Center the bar */
+  overflow: hidden;
+}
+
+/* The actual progress "fill" */
+.progress {
+  background: #74ebd5;   /* Same gradient color or pick any color */
+  height: 100%;
+  width: 0;              /* Start from 0, animate to accuracy % */
+  transition: width 0.5s;
+}
+
+#results-section button {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: #ACB6E5;
+  color: #333;
+  border: none;
+  margin-top: 20px;
+}
+
+#results-section button:hover {
+  background-color: #74ebd5;
+}
+
+footer{
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

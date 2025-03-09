@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eXer TypinG - Landing</title>
+  <style>
+
+
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display:flex;
+      padding: 40px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 300px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      align-items: center;
+      text-align: center;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group{
+      padding: 10px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      display:block;
+      width: 50%;
+      padding: 10px;
+      background: #74ebd5;
+      border: 1px solid black;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      color: black;
+      margin: 0 auto;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    button:hover {
+      background: #ACB6E5;
+    }
+
+    footer{
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>eXer TypinG</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+<main>
+
+  <div class="container">
+    <!-- Welcome Section -->
+    <section id="welcome-section" class="section active">
+      <h1>Welcome to eXer TypinG</h1>
+      <div class="form-group">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" placeholder="Your Name">
+      </div>
+      <button id="enter-name-btn">Enter</button>
+    </section>
+
+    <!-- Configuration Section -->
+    <section id="config-section" class="section">
+      <h2>Configure Your Mode</h2>
+      <div class="form-group">
+        <label for="test-type">Test Type :</label>
+        <select id="test-type">
+          <option value="words">Words</option>
+          <option value="paragraphs">Paragraphs</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="test-duration">Duration - minutes :</label>
+        <select id="test-duration">
+          <option value="1">1 Minute</option>
+          <option value="3">3 Minutes</option>
+          <option value="5">5 Minutes</option>
+          <option value="10">10 Minutes</option>
+          <option value="15">15 Minutes</option>
+          <option value="0">Unlimited</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="test-difficulty">Difficulty :</label>
+        <select id="test-difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <button id="start-test-btn">Start</button>
+    </section>
+  </div>
+
+</main>
+
+  <footer>
+    <p>&copy; 2025 eXer TypinG || All Rights Reserved</p>
+  </footer>
+
+  <script>
+    
+      // Handle Welcome Section: Save username and show configuration
+      document.getElementById('enter-name-btn').addEventListener('click', function() {
+        const username = document.getElementById('username').value.trim();
+        if (username === "") {
+          alert("Please enter your name.");
+          return;
+        }
+        localStorage.setItem('exerTypingUsername', username);
+        document.getElementById('welcome-section').classList.remove('active');
+        document.getElementById('config-section').classList.add('active');
+      });
+
+      // Handle Configuration Section: Save full config and redirect to main.html
+      document.getElementById('start-test-btn').addEventListener('click', function() {
+        const username = localStorage.getItem('exerTypingUsername');
+        if (!username) {
+          alert("Username not found. Please enter your name again.");
+          return;
+        }
+        const testType = document.getElementById('test-type').value;
+        const testDuration = document.getElementById('test-duration').value;
+        const testDifficulty = document.getElementById('test-difficulty').value;
+
+        // Save configuration, including soundEnabled
+        const config = {
+          username: username,
+          testType: testType,
+          testDuration: testDuration,
+          testDifficulty: testDifficulty,
+        };
+        localStorage.setItem('exerTypingConfig', JSON.stringify(config));
+        window.location.href = 'main.html';
+      });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - eXer Typing</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #4A90E2;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+    }
+    .left-side, .right-side {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    .right-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .right-side img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .about-content {
+      margin-bottom: 30px;
+    }
+    .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .about-content ul {
+      list-style: disc inside;
+      margin-bottom: 15px;
+    }
+    .developer-section {
+      margin-bottom: 30px;
+    }
+    .developer-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    /* Running names animations */
+    .running-names {
+      margin: 10px 0;
+      overflow: hidden;
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    .running-names .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 1.8rem;
+      animation: scroll-left 15s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4A90E2;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      footer {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About eXer Typing</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="left-side">
+      <div class="about-content">
+        <h2>About This App</h2>
+        <p>Exer Typing is a modern, interactive typing test application built using HTML, CSS, and JavaScript. It offers:</p>
+        <ul>
+          <li>Multiple test modes: Words or Paragraphs</li>
+          <li>Customizable durations: 1, 3, 5, 10, 15 minutes or an unlimited mode</li>
+          <li>Difficulty levels: Easy, Medium, and Hard</li>
+          <li>Real-time typing analysis with speed (WPM) and accuracy metrics</li>
+          <li>Beautiful, animated, and responsive interface</li>
+          <li>Local storage for temporary data persistence</li>
+        </ul>
+      </div>
+      <div class="developer-section">
+        <h3>Developer</h3>
+        <p>This application was developed by Lucifer using cutting‑edge web technologies.</p>
+        <p>Technologies used:</p>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+        </ul>
+      </div>
+      <!-- Four lines of animated running names -->
+      <div class="running-names">
+        <div class="scrolling-text">Lucifer • Developer • Exer Typing • Innovative Solutions</div>
+      </div>
+      <div class="running-names">
+        <div class="scrolling-text">Creative • Passionate • Modern • Interactive</div>
+      </div>
+      <div class="running-names">
+        <div class="scrolling-text">HTML5 • CSS3 • JavaScript • Cutting‑Edge</div>
+      </div>
+      <div class="running-names">
+        <div class="scrolling-text">Responsive • Dynamic • Engaging • User‑Friendly</div>
+      </div>
+    </div>
+    <div class="right-side">
+      <!-- Replace the src with your own image if available -->
+      <img src="https://via.placeholder.com/500x500?text=Exer+Typing" alt="Exer Typing">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Exer Typing</p>
+  </footer>
+  
+  <script>
+    // JavaScript for the About page
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Welcome to the Exer Typing About page!');
+      
+      /* 
+      // If you're experiencing issues with the typing test (e.g., keys not registering),
+      // ensure that the hidden input remains focused. For example, in your typing test page:
+      
+      const typingSection = document.getElementById('typing-section');
+      const hiddenInput = document.getElementById('hidden-input');
+      document.addEventListener('keydown', (e) => {
+        if(typingSection && typingSection.classList.contains('active') && document.activeElement !== hiddenInput) {
+          hiddenInput.focus();
+        }
+      });
+      
+      // This snippet forces focus back to the hidden input whenever a key is pressed and 
+      // the typing test area is active. You can integrate it into your typing test script.
+      */
+    });
+  </script>
+</body>
+</html>
