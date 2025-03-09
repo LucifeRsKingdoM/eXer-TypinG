@@ -2,9 +2,7 @@
 
 Welcome to **eXer TypinG** – a **modern, interactive, and engaging typing test application** that helps you improve your typing speed and accuracy! 🚀 Designed with a **sleek UI, smooth animations, and real-time performance tracking**, Exer Typing offers a dynamic experience for all skill levels. 🎨🎯
 
-![Typing Speed Test](! 
-)  
-
+![Typing Speed Test](! ![eXer-TypinG](https://github.com/user-attachments/assets/17134d6c-06cb-4399-b5f4-cdaa57cd9a3e) )  
 ---
 
 ## 📌 Features ✨
