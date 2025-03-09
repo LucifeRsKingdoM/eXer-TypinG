@@ -35,7 +35,7 @@ Exer Typing is built with **cutting-edge web technologies** to ensure a smooth, 
 ## 🎬 Live Demo 🌍
 
 🚀 **Try Exer Typing now!** Click the link below to start typing:  
-🔗 [Live Demo]([https://luciferskingdom.github.io/eXer-TypinG/]) 🔥
+🔗 [Live Demo] https://luciferskingdom.github.io/eXer-TypinG/ . 🔥
 
 ---
 
