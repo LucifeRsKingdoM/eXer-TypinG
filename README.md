@@ -2,7 +2,8 @@
 
 Welcome to **eXer TypinG** – a **modern, interactive, and engaging typing test application** that helps you improve your typing speed and accuracy! 🚀 Designed with a **sleek UI, smooth animations, and real-time performance tracking**, Exer Typing offers a dynamic experience for all skill levels. 🎨🎯
 
-![Typing Speed Test](https://user-images.githubusercontent.com/example.png)  
+![Typing Speed Test](![Screenshot 2025-03-09 163732](https://github.com/user-attachments/assets/dfc1581e-a7ad-4991-8450-8f4304795d6e)
+)  
 
 ---
 
@@ -36,7 +37,7 @@ Exer Typing is built with **cutting-edge web technologies** to ensure a smooth, 
 ## 🎬 Live Demo 🌍
 
 🚀 **Try Exer Typing now!** Click the link below to start typing:  
-🔗 [Live Demo](https://your-website-link.com) 🔥
+🔗 [Live Demo]([https://your-website-link.com](https://luciferskingdom.github.io/eXer-TypinG/)) 🔥
 
 ---
 
@@ -64,7 +65,7 @@ open index.html   # macOS
 
 Here’s a sneak peek of Exer Typing’s beautiful UI: 🎨🔥
 
-![Typing Test Screenshot](https://user-images.githubusercontent.com/example-screenshot.png)
+![Typing Test Screenshot](![Screenshot 2025-03-09 163732](https://github.com/user-attachments/assets/89d31ab6-6725-43f0-99de-51b14101ced7), ![Screenshot 2025-03-09 163756](https://github.com/user-attachments/assets/33424075-d62d-4aab-9723-1304644e0485), ![Screenshot 2025-03-09 163820](https://github.com/user-attachments/assets/eca3d8af-8e11-4875-8c58-19f1be3547ef) )
 
 ---
 
