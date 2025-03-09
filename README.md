@@ -45,7 +45,7 @@ Clone the repository and run it locally:
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-repo/exer-typing.git
+git clone [https://github.com/LucifeRsKingdoM/eXer-TypinG.git]
 
 # Navigate into the directory
 cd exer-typing
